@@ -1,0 +1,59 @@
+class Spill
+{  
+  public static void main(String[] args) {
+    TerningKopp kopp = new TerningKopp();
+    int sum = kopp.trilll();
+    
+ if (sum == 7) {
+			System.out.println(v1 + " + " + v2 + " = " + sum +  ". Du vant");
+		}
+		else {
+			System.out.println(v1 + " + " + v2 + " = " + sum + ". Du tapte");
+		}
+  }  
+  
+  1 -- 1 TerningKopp;
+}
+
+class Terning  
+{  
+  int max = 6;
+  int verdi;
+  
+  public int trill() {
+    verdi = (int) (Math.random() * max) + 1;
+    return verdi;
+  }
+  
+  1 -- 2 TerningKopp;
+   
+}  
+
+class TerningKopp
+{
+  Terning t1 = new Terning();
+  Terning t2 = new Terning();
+  
+  public int trill() {
+		return t1.trill() + t2.trill();
+  }
+    
+}//$?[End_of_model]$?
+
+namespace -;
+
+
+class Terning
+{
+  position 274 230 109 73;
+}
+
+class TerningKopp
+{
+  position 50 230 109 45;
+}
+
+class Spill
+{
+  position 50 30 109 45;
+}
